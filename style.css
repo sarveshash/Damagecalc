@@ -1,3 +1,4 @@
+/* THEME VARIABLES */
 :root {
     --bg-color: black;
     --text-color: white;
@@ -16,18 +17,30 @@
     --button-text: white;
 }
 
+/* BASIC RESET */
 * {
     margin: 0;
     padding: 0;
     font-family: poppins, sans-serif;
 }
 
+/* PAGE TRANSITION ANIMATION */
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    transition: background 0.3s ease, color 0.3s ease;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.5s ease;
 }
 
+/* SLIDE ANIMATION */
+.slide-out {
+    transform: translateX(-100%);
+}
+
+/* TITLE */
 .title-class {
     font-size: 30px;
     font-family: archivo, sans-serif;
@@ -41,9 +54,10 @@ body {
 
     background: var(--title-bg);
     color: var(--text-color);
-
     letter-spacing: 3px;
 }
+
+/* MAIN INFO BOX */
 .info-box {
     width: 45%;
     margin: 7% auto;
@@ -58,6 +72,13 @@ body {
 
     transition: background 0.3s ease, color 0.3s ease;
 }
+
+/* REMOVE UNDERLINE FROM LINK */
+a {
+    text-decoration: none;
+}
+
+/* BUTTON */
 .gs-button {
     padding: 12px 28px;
     font-size: 1.5em;
@@ -78,6 +99,8 @@ body {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(255,255,255,0.2);
 }
+
+/* THEME BUTTON */
 .theme-change {
     position: fixed;
     top: 20px;
@@ -102,21 +125,4 @@ body {
 .theme-change svg {
     width: 28px;
     height: 28px;
-}
-@media (max-width: 1040px) {
-    .info-box { font-size: 0.95em; padding: 20px; }
-    .gs-button { font-size: 1em; padding: 12px 24px; }
-}
-@media (max-width: 980px) {
-    .info-box { font-size: 0.9em; padding: 30px; }
-    .gs-button { font-size: 0.8em; padding: 8px 20px; }
-}
-@media (max-width: 850px) { .title-class { font-size: 26px; } }
-@media (max-width: 485px) {
-    .title-class { font-size: 20px; }
-    .info-box { font-size: 0.8em; padding: 30px; }
-}
-@media (max-width: 380px) {
-    .title-class { font-size: 15px; }
-    .info-box { font-size: 0.7em; }
 }
